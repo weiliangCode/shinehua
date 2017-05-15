@@ -82,7 +82,8 @@
 	text-align:right;
 	font-family:'微软雅黑';	
 	padding:0 3%;
-	}
+	text-align: center;
+}
 	
 .design-goal .System-advantage1,.design-goal .System-advantage2,.design-goal .System-advantage3,.design-goal .System-advantage4{
 	width:80%;

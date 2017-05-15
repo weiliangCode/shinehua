@@ -44,79 +44,47 @@ input{outline:none;}
 }
 
 /*顶部区域start*/	
-/*顶部logo内容样式区域*/
-
-// header{background:#1d1d1a;overflow:hidden;}
-header{background:#1d1d1a;overflow:hidden;}
-
-.Left_content{
-	width:50%;
-	}
-
-.Logo{
-	margin:20px 0;
-	width:187px;
-	height:73px;
-	}
-.vertical_line{
-	width:1px;
-	height:80px;	
-	display:block;	
-	margin:5% 10px;
-	background:-webkit-linear-gradient(top,#1d1d1d,#ffffff,#1d1d1d);	
-	background:-ms-linear-gradient(top,#1d1d1d,#ffffff,#1d1d1d);	
-	background:-moz-linear-gradient(top,#1d1d1d,#ffffff,#1d1d1d);	
-	background:-o-linear-gradient(top,#1d1d1d,#ffffff,#1d1d1d);	
-	background:linear-gradient(top,#1d1d1d,#ffffff,#1d1d1d);
-	}
-.QR_code{
-	margin:30px 0;
-	width:66px;
-	height:66px;
-	} 	
-	
-	
-/*顶部右侧内容样式区域*/	
-.Right_content{
-	width:50%;
-	margin-top:3%;
-  h4{
-    width:100%;
-    font-size:24px;
-    font-family:'coopbl';
-    line-height:40px;
-    color:#fad41b;
-    font-weight:bold;
-    text-align:right;
-    span{font-size:16px;font-weight:normal;}
-    b{
-      width:25px;
-      height:17px;
-      background:url(../images/Email-icon.png) no-repeat;
-      display:inline-block;
-      margin:0 4px;
-    }
-  }
+header{
+    height: 100px;
+    text-align: center;
+    background: #ffffff;
+    margin: auto;
 }
 
-.underline{
-	width:50%; 	
-	height:1px;
-	background:-webkit-linear-gradient(left,#1d1d1d,#fff);	
-	background:-ms-linear-gradient(left,#1d1d1d,#fff);	
-	background:-moz-linear-gradient(left,#1d1d1d,#fff);	
-	background:-o-linear-gradient(left,#1d1d1d,#fff);	
-	background:linear-gradient(left,#1d1d1d,#fff);	
+.Left_content{
+		width:20%;
+		h1{
+			margin:20px 0;
+			font-size: 40px;
+			font-family: "楷体";
+			color: #000;
+		}
 	}
 
-.Right_content p{
-	clear:both;	
-	font-size:16px;
-	font-family:"微软雅黑";
-	line-height:30px;
-	text-align:right;
-	color:#fff;
-	}	
+	.Right_content{
+		width:75%;
+		// margin-top:3%;
+	}
+
+	.topNav{
+		width: 100%;
+		text-align: right;
+		li{
+			display: inline-block;
+			font-size: 16px;
+			width: 120px;
+			text-align: center;
+			a {
+				display: inline-block;
+				width: 120px;
+				line-height: 100px;
+				color: #000
+			}
+			.currentLi{
+				color: #0097d6
+			}
+		}
+	}
 /*顶部区域end*/			
 	
 

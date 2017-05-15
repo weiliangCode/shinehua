@@ -228,6 +228,100 @@
 	text-align:right;
 	margin-bottom:50px;
 	}
+
+/*解决方案*/
+.ko_Title {
+    margin: 40px 0;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+}
+
+.ko {
+	width: 1006px;
+    height: 350px;
+    position: relative;
+    text-align: center;
+    color: #333;
+	text-align: center;
+}
+
+.boxAlign {
+    box-align: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    -o-box-pack: center;
+    box-pack: center;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+}
+
+.cssBox {
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    display: -ms-flexbox;
+}
+
+figure {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+}
+
+.circle {
+	padding-top:33px;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    position: absolute;
+    color: #fff;
+    -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.circle1 {
+    left: 0px;
+    top: 0;
+    background: #43CEC7;
+}
+
+.circle2 {
+    left: 156px;
+    bottom: 0;
+    background: #00C0D7;
+}
+
+.circle3 {
+    left: 310px;
+    top: 0;
+    background: #4AD89C;
+}
+
+.circle4 {
+    right: 278px;
+    bottom: 0;
+    background: #4AD89C;
+}
+
+.circle5 {
+    right: 128px;
+    top: 0;
+    background: #00C0D7;
+}
+
+.circle6 {
+    right: -28px;
+    bottom: 0;
+    background: #43CEC7;
+}
+
+
 	
 	
 /*'阿里巴巴--马云'感言内容样式区域*/

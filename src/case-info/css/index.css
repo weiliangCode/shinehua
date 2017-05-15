@@ -1,0 +1,32 @@
+.fresh-banner {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.fresh-banner img {
+    display: block;
+    margin: 0;
+}
+
+.case-msg {
+    width: 50%;
+    margin: 20px 0;
+    padding: 0 5%;
+}
+
+.case-msg h1 {
+    font-family: '微软雅黑';
+    font-size: 48px;
+    line-height: 90px;
+    text-align: center;
+    color: #323232;
+}
+
+.case-msg p {
+    font-family: '微软雅黑';
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #323232;
+}

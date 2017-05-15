@@ -1,74 +1,151 @@
 var gulp = require('gulp');
-
-
 var uglify = require('gulp-uglify');
-
 var minifyCss = require('gulp-minify-css');
-
 var concat = require('gulp-concat');
-
 var rename = require('gulp-rename');
+var minifyHTML = require('gulp-htmlmin');
+var imagemin = require('gulp-imagemin');
 
-
-gulp.task('copy-index', function(){
-	//拷贝index
-	gulp.src('src/index.html')
-	.pipe(gulp.dest('dist'));
-})
 
 //拷贝文件
 gulp.task("copy-files",function(){
-	//拷贝图片
-	gulp.src('src/img/*')
-	.pipe(gulp.dest('dist/img'));
-	
-	gulp.src('src/fonts/*')
-	.pipe(gulp.dest('dist/fonts'));
-	
 	//拷贝资源包
 	gulp.src('src/lib/**/*')
 	.pipe(gulp.dest('dist/lib'));
-	
-	//拷贝views
-	gulp.src('src/views/**/*')
-	.pipe(gulp.dest('dist/views'));
-	
+})
+
+
+//处理html
+gulp.task('handle-html', function(){
+	//拷贝index
+	gulp.src('src/index.html')
+	.pipe(minifyHTML({collapseWhitespace: true}))
+	.pipe(gulp.dest('dist'));
+
+	//拷贝about
+	gulp.src('src/about/index.html')
+	.pipe(minifyHTML({collapseWhitespace: true}))
+	.pipe(gulp.dest('dist/about'));
+
+	//拷贝case
+	gulp.src('src/case/index.html')
+	.pipe(minifyHTML({collapseWhitespace: true}))
+	.pipe(gulp.dest('dist/case'));
+
+	//拷贝service
+	gulp.src('src/service/index.html')
+	.pipe(minifyHTML({collapseWhitespace: true}))
+	.pipe(gulp.dest('dist/service'));
+
+	//拷贝solution
+	gulp.src('src/solution/index.html')
+	.pipe(minifyHTML({collapseWhitespace: true}))
+	.pipe(gulp.dest('dist/solution'));
+
+})
+
+//处理img
+gulp.task('handle-img', function(){
+	gulp.src('src/images/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest('dist/images'));
+
+	gulp.src('src/index/images/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest('dist/index/images'));
+
+		gulp.src('src/about/images/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest('dist/about/images'));
+
+		gulp.src('src/case/images/*')
+		.pipe(imagemin())
+	.pipe(gulp.dest('dist/case/images'));
+
+		gulp.src('src/service/images/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest('dist/service/images'));
+
+		gulp.src('src/solution/images/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest('dist/solution/images'));
 })
 
 
 //处理css
 gulp.task('handle-css', function(){
+	//style
 	//得到所有的css文件
-	gulp.src('src/css/**/*.css')
-	//合并
-	.pipe(concat('style.css'))
-	.pipe(gulp.dest('dist/css'))
+	gulp.src('src/styles/base.css')
 	//压缩
 	.pipe(minifyCss())
-	//重命名
-	.pipe(rename('style.min.css'))
 	//保存
-	.pipe(gulp.dest('dist/css'));
-	
+	.pipe(gulp.dest('dist/styles'));
+
+
+	// index
+	gulp.src('src/index/css/index.css')
+	.pipe(minifyCss())
+	.pipe(gulp.dest('dist/index/css/'));
+
+
+	// about
+	gulp.src('src/about/css/index.css')
+	.pipe(minifyCss())
+	.pipe(gulp.dest('dist/about/css/'));
+
+	// case
+	gulp.src('src/case/css/index.css')
+	.pipe(minifyCss())
+	.pipe(gulp.dest('dist/case/css/'));
+
+		// service
+	gulp.src('src/service/css/index.css')
+	.pipe(minifyCss())
+	.pipe(gulp.dest('dist/service/css/'));
+
+		// solution
+	gulp.src('src/solution/css/index.css')
+	.pipe(minifyCss())
+	.pipe(gulp.dest('dist/solution/css/'));
+
 })
+
 
 //处理js
 gulp.task('handle-js', function(){
-	gulp.src('src/javascript/**/*.js')
-	//合并
-	.pipe(concat('bundle.js'))
-	.pipe(gulp.dest('dist/javascript'))
+	// index
+	//得到所有的js文件
+	gulp.src('src/index/js/index.js')
 	//混淆压缩
 	.pipe(uglify())
-	//重命名
-	.pipe(rename('bundle.min.js'))
 	//保存
-	.pipe(gulp.dest('dist/javascript'));
-	
+	.pipe(gulp.dest('dist/index/js/'));
+
+		// about
+	gulp.src('src/about/js/index.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('dist/about/js/'));
+
+		// case
+	gulp.src('src/case/js/index.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('dist/case/js/'));
+
+		// service
+	gulp.src('src/service/js/index.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('dist/service/js/'));
+
+		// solution
+	gulp.src('src/solution/js/index.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('dist/solution/js/'));
+
 })
 
 //默认任务
-gulp.task('default', ['copy-files', 'handle-css', 'handle-js'],  function(){
+gulp.task('default', ['copy-files', 'handle-css', 'handle-js','handle-html','handle-img'],  function(){
 	
 	console.log('所有任务执行完毕');
 	

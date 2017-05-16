@@ -63,8 +63,13 @@
 .company-intro p{
 	font-size:14px;
 	line-height:36px;
-	text-indent:28px;
+	/*text-indent:28px;*/
+
 	color:#323232;
+	}
+
+	.company-intro .b{
+		font-weight: 600;
 	}
 	
 	

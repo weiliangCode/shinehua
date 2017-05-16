@@ -4,7 +4,7 @@ $(function () {
   var codeStr = '';
   switch (goodsId) {
     case "001": {
-      codeStr = creation001(['images/oa.png', 'images/oa01.png'], '后台管理系统');
+      codeStr = creation001(['images/oa.png', 'images/oa01.png'], '支付运营管理平台');
     } break;
 
     case "002": {

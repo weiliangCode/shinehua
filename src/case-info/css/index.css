@@ -30,3 +30,12 @@
     text-align: center;
     color: #323232;
 }
+.cota{
+    margin: 20px 0;
+}
+.cota .title{
+    font-size: 30px;
+    color: #2eb7f5;
+    margin-bottom: 20px;
+    text-align: center;
+} 

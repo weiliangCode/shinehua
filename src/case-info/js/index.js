@@ -13,6 +13,13 @@ $(function () {
     case "003": {
       codeStr = creation003();
     } break;
+    case "005": {
+      codeStr = creation001(['images/case_04_a.png','images/case_04_b.png','images/case_04_c.png','images/case_04_d.png','images/case_04_e.png'],'移动支付营销平台-PC收银');
+    } break;
+    case "006": {
+      codeStr = creation001(['images/case_06_a.png','images/case_06_b.png','images/case_06_c.png','images/case_06_d.png','images/case_06_e.png'],'生鲜APP');
+    } break;
+
 
 
     default: {
@@ -26,7 +33,7 @@ $(function () {
     var str = '<div class="container">';
     str += '<h3 class="title">' + title + '</h3>';
     for (var i = 0; i < imgArr.length; i++) {
-      str += '<img src="' + imgArr[i] + '" alt="' + title + '" width="100%">';
+      str += '<img class="mB20" src="' + imgArr[i] + '" alt="' + title + '" width="100%">';
     }
     str += '</div>';
     return str;

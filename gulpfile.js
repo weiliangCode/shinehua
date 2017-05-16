@@ -14,7 +14,7 @@ gulp.task("copy-files", function () {
 		.pipe(rename('jquery.js'))
 		.pipe(gulp.dest('dist/lib/jquery'));
 
-	//jquery
+	//bootstrap
 	gulp.src('src/lib/bootstrap/js/bootstrap.min.js')
 		.pipe(rename('bootstrap.js'))
 		.pipe(gulp.dest('dist/lib/bootstrap/js'));
@@ -22,6 +22,9 @@ gulp.task("copy-files", function () {
 	gulp.src('src/lib/bootstrap/css/bootstrap.min.css')
 		.pipe(rename('bootstrap.css'))
 		.pipe(gulp.dest('dist/lib/bootstrap/css'));
+
+	gulp.src('src/lib/bootstrap/fonts/*')
+	.pipe(gulp.dest('dist/lib/bootstrap/fonts'));
 
 })
 

@@ -202,7 +202,7 @@ header {
 .add_res p {
   background: url(../images/add.png) no-repeat 0 center;
   height: 37px;
-  font-size: 12px;
+  font-size: 16px;
   color: #fad41b;
   padding-left: 40px;
   text-align: left;
@@ -219,9 +219,10 @@ header {
   margin-top: 25px;
 }
 .phone_01 p {
-  padding: 3px 0;
+  height: 36px;
+  line-height: 36px;
   background: url(../images/phone_01.png) no-repeat 0 center;
-  font-size: 20px;
+  font-size: 18px;
   color: #fad41b;
   padding-left: 40px;
   text-align: left;
@@ -307,7 +308,6 @@ footer p span {
     margin-top: 25px;
   }
   .phone_01 p {
-    padding: 8px 0;
     font-size: 16px;
     padding-left: 40px;
     margin-top: 5px;
@@ -350,13 +350,15 @@ footer p span {
   .add_res {
     margin-left: 20px;
   }
+  .add_res p {
+    font-size: 12px;
+  }
   .phone_01 {
     margin-left: 20px;
     float: left;
     margin-top: 25px;
   }
   .phone_01 p {
-    padding: 8px 0;
     font-size: 12px;
     padding-left: 40px;
     margin-top: 5px;

@@ -22,6 +22,18 @@
 	color:#fff;	
 	}
 .func-group{margin:50px auto;margin-top:10%;}
+.func-column img,.func-column .glyphicon-yen{
+	transition: 0.5s;
+}
+
+.func-column:hover img{
+	transform: scale(1.2);
+}
+
+.func-column:hover .glyphicon-yen{
+	transform: scale(1.2);
+}
+
 .func-column .payFixa{
 	position: relative;
 	width: 98px;
@@ -87,7 +99,12 @@
 	border-radius:50%;
 	margin:0 auto;	
 	overflow:hidden;
+	transition: 1s;
+	cursor: pointer;
 	}
+.cicle-icon:hover{
+	transform: rotate(-360deg);
+}
 .cicle-icon .glyphicon-yen{
 	font-size: 40px;
 	width: 40px;

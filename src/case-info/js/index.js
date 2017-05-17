@@ -1,4 +1,11 @@
 $(function () {
+
+  $(".Menubar").css("display","none");
+  $(".menu").click(function() {
+    $(".Menubar").slideToggle(500);
+  })
+
+
   var goodsId = location.search;
   goodsId = goodsId.split("=")[1];
   var codeStr = '';

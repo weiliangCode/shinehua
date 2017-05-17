@@ -25,6 +25,7 @@ body {
   font-size: 12px;
   color: #000;
   font-family: "微软雅黑";
+  overflow-x: hidden;
 }
 ul,
 ol,
@@ -112,9 +113,6 @@ header {
   background: #ffffff;
   margin: auto;
 }
-.Left_content {
-  width: 20%;
-}
 .Left_content h1 {
   margin: 20px 0;
   font-size: 40px;
@@ -131,9 +129,6 @@ header {
   /* Firefox */
   -o-transform: scale(1.2);
   /* Opera */
-}
-.Right_content {
-  width: 75%;
 }
 .topNav {
   width: 100%;
@@ -154,185 +149,55 @@ header {
 .topNav li .currentLi {
   color: #0097d6;
 }
-/*顶部区域end*/
-/*顶部导航条内容样式区域*/
 .nav_sider {
   display: block;
   width: 100%;
-  height: 40px;
-  background: #008aad;
-  border-radius: 0;
-  border-bottom: 0px;
+  height: 60px;
+  background: #5584c4;
   z-index: 1200;
   position: relative;
+  display: none;
+  padding-top: 60px;
+  box-sizing: border-box;
 }
-.nav_sider span {
+.nav_sider .menu {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   position: absolute;
   right: 15px;
   top: 11px;
   cursor: pointer;
+}
+.nav_sider .Menubar {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 60px;
+  background: rgba(85, 132, 196, 0.9);
   display: none;
 }
-.nav_sider span:hover {
-  color: #1d1d1a;
-}
-.Menubar {
-  width: 96%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.Menubar li {
-  float: left;
-  padding: 0;
-  width: 12%;
-  text-align: center;
-  font-size: 16px;
-  line-height: 40px;
-  background: url(../images/navbar-line.png) repeat-y;
-  cursor: pointer;
-  display: inline-block;
-}
-.Menubar li a {
-  text-decoration: none;
-  outline: none;
-}
-.Menubar li:first-child {
-  background-image: none;
-}
-.Menubar li:last-child {
-  background-image: url(../images/navbar-line.png) repeat-y;
-}
-.Menubar li.others {
-  float: left;
-  padding: 0;
-  width: 12%;
-  text-align: center;
-  background-color: transparent;
-}
-.Menubar li.others a {
+.nav_sider .Menubar a {
   width: 100%;
-  font-size: 16px;
-  font-family: '微软雅黑';
-  line-height: 40px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-}
-.Menubar li.currentLi {
-  float: left;
-  padding: 0;
-  width: 12%;
+  line-height: 60px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.25);
-  cursor: pointer;
-}
-.Menubar li.currentLi a {
-  width: 100%;
   font-size: 16px;
   font-family: '微软雅黑';
   color: #fff;
-  line-height: 40px;
+  cursor: pointer;
   display: inline-block;
 }
-.others a:hover {
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.25);
-  cursor: pointer;
-}
-/*页脚联系方式及版权内容样式区域*/
-address {
-  width: 100%;
-  height: 100%;
-  background: url(../images/footerbj.jpg) no-repeat;
-  background-size: cover;
-  margin: 0;
-}
-.Contact_content {
-  width: 20%;
-  float: left;
-  padding: 40px 0;
-}
-.Contact_content a {
-  outline: none;
-  cursor: pointer;
-  text-decoration: none;
-  color: #b6b6b6;
-}
-.Contact_content a:hover {
-  text-decoration: underline;
-}
-.Contact_content dt {
-  width: 100%;
-  font-size: 20px;
-  line-height: 40px;
-  margin-bottom: 18px;
-  font-weight: normal;
-}
-.Contact_content dd {
-  width: 100%;
-  font-size: 14px;
-  line-height: 36px;
-}
-/*'联系我们'内容样式区域*/
-.Contact_mode {
-  width: 40%;
-  padding: 40px 0;
-  float: left;
-}
-.Contact_mode h4 {
-  width: 100%;
-  font-size: 20px;
-  line-height: 40px;
-  margin-bottom: 18px;
-  color: #b6b6b6;
-  text-align: left;
-}
-.Contact_us {
-  width: 100%;
-  overflow: hidden;
-}
-.Contact_us li {
-  width: 42px;
-  font-size: 14px;
-  line-height: 36px;
-  color: #b6b6b6;
-  float: left;
-  text-align: center;
-  margin-right: 30px;
-  cursor: pointer;
-}
-.Contactbox {
-  clear: both;
-  width: 100%;
-}
-.subContact {
-  width: 100%;
-}
-.subContact li {
-  width: 100%;
-  font-size: 14px;
-  line-height: 36px;
-  color: #b6b6b6;
-  text-align: left;
-}
-.Contact_us .addlink {
-  border-bottom: 1px solid #b6b6b6;
-}
+/*顶部区域end*/
 .add {
   background: #22252f;
 }
 .iw_footer {
-  width: 1100px;
   margin: 0 auto;
   background: #22252f;
   padding: 20px 0 30px 0;
 }
 .add_res {
-  width: 335px;
-  margin-left: 50px;
   margin-top: 25px;
+  margin-left: 0px;
 }
 .add_res p {
   background: url(../images/add.png) no-repeat 0 center;
@@ -350,12 +215,13 @@ address {
   padding-top: 5px;
 }
 .phone_01 {
-  margin-left: 50px;
+  float: right;
   margin-top: 25px;
 }
 .phone_01 p {
+  padding: 3px 0;
   background: url(../images/phone_01.png) no-repeat 0 center;
-  font-size: 28px;
+  font-size: 20px;
   color: #fad41b;
   padding-left: 40px;
   text-align: left;
@@ -392,16 +258,26 @@ footer p span {
     padding-left: 0;
     padding-right: 0;
   }
-  /*'联系我们'内容样式区域*/
-  .Contact_content {
-    width: 20%;
-    float: left;
-    padding: 20px 0;
+  .Right_content {
+    display: block;
   }
-  .Contact_mode {
-    width: 40%;
-    float: left;
-    padding: 20px 0;
+  .topNav li {
+    width: auto;
+  }
+  .topNav li a {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+  }
+  .nav_sider {
+    display: none;
+  }
+  .nav_sider .menu {
+    font-size: 24px;
+    font-weight: normal;
+    position: absolute;
+    right: 20px;
+    top: 18px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 767px) {
@@ -410,105 +286,31 @@ footer p span {
     padding-right: 0;
   }
   /*顶部logo内容样式区域*/
-  .Left_content {
-    width: 50%;
-  }
-  .Logo,
-  .Logo img {
-    margin: 20px 0;
-    width: 100px;
-    height: 39px;
-  }
-  .vertical_line {
-    width: 1px;
-    height: 80px;
-    margin: 20px 10px;
-  }
-  .QR_code {
-    margin: 30px 0;
-    width: 66px;
-    height: 66px;
-  }
-  /*顶部右侧内容样式区域*/
   .Right_content {
-    width: 45%;
-    margin-top: 20px;
-    padding-right: 0;
+    display: none;
   }
-  .Right_content h4 {
-    width: 100%;
-    font-size: 16px;
-    font-family: 'coopbl';
-    line-height: 40px;
-  }
-  .Right_content h4 span {
-    font-size: 16px;
-    font-weight: normal;
-  }
-  .Right_content h4 b {
-    width: 25px;
-    height: 17px;
-    background: url(../images/Email-icon.png) no-repeat;
-    margin: 0 4px;
-  }
-  .underline {
-    width: 100%;
-    height: 1px;
-  }
-  .Right_content p {
-    clear: both;
-    font-size: 16px;
-    line-height: 30px;
-  }
-  /*顶部导航条内容样式区域*/
   .nav_sider {
     display: block;
-    width: 100%;
-    height: 60px;
-    background: #5584c4;
-    z-index: 1200;
-    position: relative;
   }
-  .nav_sider span {
+  .nav_sider .menu {
     font-size: 24px;
     font-weight: normal;
     position: absolute;
     right: 20px;
     top: 18px;
-    display: block;
   }
-  .Menubar {
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    z-index: 1000;
-    display: none;
+  .add_res {
+    margin-left: 0px;
   }
-  .Menubar li,
-  .Menubar li.others,
-  .Menubar li.currentLi {
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    line-height: 60px;
-    background: rgba(0, 0, 0, 0.8);
-  }
-  .Menubar li.others a,
-  .Menubar li.currentLi a {
-    width: 100%;
-    line-height: 60px;
-    text-align: center;
-  }
-  /*'联系我们'内容样式区域*/
-  .Contact_content {
-    width: 28%;
+  .phone_01 {
     float: left;
-    padding: 20px 0;
-    margin: 0 2%;
+    margin-top: 25px;
   }
-  .Contact_mode {
-    width: 100%;
-    padding: 20px 4%;
+  .phone_01 p {
+    padding: 8px 0;
+    font-size: 16px;
+    padding-left: 40px;
+    margin-top: 5px;
   }
   footer p {
     line-height: 24px;
@@ -532,109 +334,32 @@ footer p span {
   .Left_content {
     width: 100%;
   }
-  .vertical_line {
-    width: 1px;
-    height: 80px;
-    margin: 10px 8%;
+  .Right_content {
+    display: none;
   }
-  /*
-	.QR_code{
-		margin:20px 0;
-		width:66px;
-		height:66px;
-		} 	
-		
-		
-	/*顶部右侧内容样式区域*/
-  /*	.Right_content{
-		width:100%;
-		margin:10px 0;			
-		}
-		
-	.Right_content h4{
-		width:100%;
-		font-size:20px;
-		font-family:'coopbl';
-		line-height:30px;
-		text-align:left;
-		}
-	.Right_content h4 span{font-size:16px;font-weight:normal;}	
-	.Right_content h4 b{
-		width:25px;
-		height:17px;
-		background:url(../images/Email-icon.png) no-repeat;		
-		margin:0 4px;
-		}
-		
-	.underline{
-		width:100%; 	
-		height:1px;			
-		display:block;
-		margin:4px 0;	
-		background:-webkit-linear-gradient(right,#1d1d1d,#fff);	
-		background:-ms-linear-gradient(right,#1d1d1d,#fff);	
-		background:-moz-linear-gradient(right,#1d1d1d,#fff);	
-		background:-o-linear-gradient(right,#1d1d1d,#fff);	
-		background:linear-gradient(right,#1d1d1d,#fff);
-		}
-	
-	.Right_content p{
-		clear:both;	
-		font-size:16px;		
-		line-height:30px;
-		text-align:left;		
-		}	
-		
-		
-	/*顶部导航条内容样式区域*/
   .nav_sider {
     display: block;
-    width: 100%;
-    height: 60px;
-    background: #5584c4;
-    z-index: 1200;
-    position: relative;
   }
-  .nav_sider span {
+  .nav_sider .menu {
     font-size: 24px;
     font-weight: normal;
     position: absolute;
     right: 20px;
     top: 18px;
-    display: block;
   }
-  .Menubar {
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    z-index: 1000;
-    display: none;
+  .add_res {
+    margin-left: 20px;
   }
-  .Menubar li,
-  .Menubar li.others,
-  .Menubar li.currentLi {
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    line-height: 60px;
-    background: rgba(85, 132, 196, 0.9);
-  }
-  .Menubar li.others a,
-  .Menubar li.currentLi a {
-    width: 100%;
-    line-height: 60px;
-    text-align: center;
-  }
-  /*'联系我们'内容样式区域*/
-  .Contact_content {
-    width: 44%;
+  .phone_01 {
+    margin-left: 20px;
     float: left;
-    padding: 20px 4%;
-    margin: 0 3%;
+    margin-top: 25px;
   }
-  .Contact_mode {
-    width: 100%;
-    padding: 20px 6%;
+  .phone_01 p {
+    padding: 8px 0;
+    font-size: 12px;
+    padding-left: 40px;
+    margin-top: 5px;
   }
   footer p {
     line-height: 24px;

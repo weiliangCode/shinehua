@@ -238,16 +238,14 @@
     text-align: center;
 }
 
-.ko {
-	width: 1006px;
+
+.boxAlign {
+		width: 1006px;
     height: 350px;
     position: relative;
     text-align: center;
     color: #333;
-	text-align: center;
-}
 
-.boxAlign {
     box-align: center;
     -webkit-box-align: center;
     -moz-box-align: center;
@@ -1089,5 +1087,23 @@ figure {
 	
 	}
 	
+
+
+	/*响应式布局样式*/
+
+@media screen and (min-width:993px) and (max-width:1200px) {
+}
+
+
+@media screen and (min-width:768px) and (max-width:992px) {
+}
+
+@media screen and (min-width:481px) and (max-width:767px) {
+   .solve{display: none;overflow: hidden;}
+}
+
+@media screen and (max-width:480px) {
+	.solve{display: none;overflow: hidden;}
+}
 
 

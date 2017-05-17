@@ -1,22 +1,8 @@
 .index_slider {
     width: 100%;
-    height: 600px;
-    position: relative;
     overflow: hidden;
-    #slider {
-        width: 100%;
-        height: 100%;
-        li {
-            font-size: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            // display: none;
-            background: url("../images/slider_bj03.jpg") 100% 100% no-repeat; 
-        }
-    }
+    height: 600px;
+    background: url("../images/slider_bj03.jpg") 100% 100% no-repeat; 
 }
 
 .ServiceBox {
@@ -189,7 +175,7 @@
     position: relative;
     img {
         width: 100%;
-        height: 100%;
+        // height: 100%;
     }
 }
 
@@ -243,50 +229,65 @@
     font-size: 16px;
 }
 
-.brandList {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-bottom: 1px solid #ddd;
-    li:not(:nth-child(5n)) {
-        border-right: none;
-    }
-    li {
-        width: 20%;
-        float: left;
-        border: 1px solid #ddd;
-        border-bottom: none;
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -ms-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s;
-    }
-    li div {
-        height: 180px;
-    }
-    li img {
-        margin-left: auto;
-        margin-right: auto;
+/*商家*/
+.merchant{
+    margin-bottom: 20px;
+}
+
+.merchant .merchantBox{
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    margin-left: -1px;
+    height: 100px;
+
+    img{
+        height: 50px;
         display: block;
-        vertical-align: middle;
-    }
-    .cssBox {
-        display: -moz-box;
-        display: -webkit-box;
-        display: box;
-        display: -ms-flexbox;
-        width: 100%;
+        margin: 25px auto 0;
     }
 }
 
-.boxAlign {
-    box-align: center;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -moz-box-pack: center;
-    -webkit-box-pack: center;
-    -o-box-pack: center;
-    box-pack: center;
-    -ms-flex-pack: center;
-    -ms-flex-align: center;
+/*响应式布局样式*/
+
+@media screen and (min-width:993px) and (max-width:1200px) {
+    .index_slider{height: 500px;}
+}
+
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .index_slider{height: 400px;}
+}
+
+@media screen and (min-width:481px) and (max-width:767px) {
+    .index_slider{height: 300px;}
+    .in_news_l {
+        width: 100%;
+    }
+    .in_news_r{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .index_slider{display: none;}
+
+    .merchant .merchantBox{
+        margin-top: -1px;
+        margin-left: -1px;
+        height: 80px;
+        img{
+            height: 30px;
+            display: block;
+            margin: 25px auto 0;
+        }
+    }
+
+    .in_news_l {
+        width: 100%;
+    }
+    .in_news_r{
+        width: 100%;
+        margin-top: 20px;
+    }
 }

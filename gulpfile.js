@@ -26,6 +26,10 @@ gulp.task("copy-files", function () {
 	gulp.src('src/lib/bootstrap/fonts/*')
 	.pipe(gulp.dest('dist/lib/bootstrap/fonts'));
 
+	//unslider
+	gulp.src('src/lib/unslider.min.js')
+		.pipe(gulp.dest('dist/lib/unslider.min.js'));
+
 })
 
 

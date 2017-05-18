@@ -52,30 +52,10 @@ header{
 }
 
 .Left_content{
-		// width:20%;
-		h1{
-			margin:20px 0;
-			font-size: 40px;
-			font-family: "楷体";
-			color: #000;
-
-			text-shadow: 
-			1px 1px 0 #CCC, 
-			2px 2px 0 #CCC, /* end of 2 level deep grey shadow */ 
-			3px 3px 0 #444, 
-			4px 4px 0 #444, 
-			5px 5px 0 #444, 
-			6px 6px 0 #444; /* end of 4 level deep dark shadow */ 
-		}
-		h1:hover 
-		{ 
-		/* CSS3 Transform Effect */ 
-		-webkit-transform: scale(1.2); /* Safari & Chrome */ 
-		-moz-transform: scale(1.2); /* Firefox */ 
-		-o-transform: scale(1.2); /* Opera */ 
-		} 
+	h1{
+		margin-top: 16px;
 	}
-
+}
 	.topNav{
 		width: 100%;
 		text-align: right;
@@ -84,15 +64,38 @@ header{
 			font-size: 16px;
 			width: 120px;
 			text-align: center;
+			position: relative;
 			a {
+				font-weight: 600;
 				display: inline-block;
 				width: 120px;
 				line-height: 100px;
-				color: #000
+				color: #000;
 			}
-			.currentLi{
-				color: #0097d6
+			.line{
+				position: absolute;
+				left: 0;
+				bottom: 10px;
+				width: 0px;
+				height: 3px;
+				background: #0097d6;
+				transition: 1s;
 			}
+		}
+		li:hover .line{
+			width: 100%;
+		}
+		li:hover a{
+			color: #fb5050;
+		}
+		.currentLi {
+			a{
+					color: #0097d6;
+			}
+
+		//  .line{
+		// 		width:100%;
+		// 	}
 		}
 	}
 	.nav_sider{
@@ -205,7 +208,97 @@ footer p span{
 	margin-right:6px;		
 	color:#646464;
 	}
-	
+
+
+	/*侧边栏*/
+	#sidebarfixed {
+    position: fixed;
+    right: 1px;
+    top: 50%;
+    font-family: "PingFang SC","Helvetica Neue",Helvetica,STHeiTi,sans-serif;
+    z-index: 100;
+		li {
+			position: relative;
+			display: block;
+			width: 60px;
+			height: 64px;
+			margin-bottom: 2px;
+			// border: 1px solid #ececec;
+			border-radius: 3px;
+			cursor: pointer;
+			text-align: center;
+			color: #323232;
+			background-color: rgb(203, 203, 203);
+			padding-top: 10px;
+			box-sizing: border-box;
+			.glyphicon{
+				font-size: 24px;
+			}
+		}
+
+		li:nth-child(1){
+			padding-top: 0;
+			img{margin-left: 6px;}
+		}
+
+		li:hover{background-color:rgb(102,102,102);}
+		li:hover .sidebar-item{
+				display: block;
+		} 
+
+		.sidebar-item {
+			position: absolute;
+			top: -1px;
+			left: -188px;
+			display: none;
+			width: 154px;
+			.sidebar-item-inner {
+				position: relative;
+				width: 180px;
+				height: 64px;
+				text-align: center;
+				border-radius: 3px;
+				border: 1px solid #ececec;
+				color: #19aac1;
+				background-color: #fff;
+				display: block;
+				h3 {
+					margin-top: 15px;
+					height: 20px;
+					font-size: 12px;
+					font-weight: 400;
+					color: #7b7b7b;
+				}
+				h4 {
+						height: 28px;
+						font-weight: 400;
+						font-size: 14px;
+						color: #19aac1;
+				}
+				.QQchat{
+					float: left;
+					margin-right: 5px;
+				}
+				
+		}
+
+		.sidebar-item-inner:before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 26px;
+			right: -5px;
+			width: 8px;
+			height: 8px;
+			color: #ececec;
+			border-top: 1px solid #ececec;
+			border-right: 1px solid #ececec;
+			transform: rotate(45deg);
+			background-color: #fff;	
+		}
+	}
+}
+
 	
 	
 /*响应式布局样式*/
@@ -293,7 +386,6 @@ footer p span{
 	
 	
 @media screen and (max-width:480px) {
-	
 	.container{
 		padding-left:0;
 		padding-right:0;
@@ -343,5 +435,4 @@ footer p span{
 	}
 		
 	footer p{line-height:24px;padding:10px 0;}
-	
-	}
+}

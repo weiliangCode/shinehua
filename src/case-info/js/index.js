@@ -1,7 +1,7 @@
 $(function () {
 
-  $(".Menubar").css("display","none");
-  $(".menu").click(function() {
+  $(".Menubar").css("display", "none");
+  $(".menu").click(function () {
     $(".Menubar").slideToggle(500);
   })
 
@@ -11,7 +11,7 @@ $(function () {
   var codeStr = '';
   switch (goodsId) {
     case "001": {
-      codeStr = creation001(['images/oa.png', 'images/oa01.png'], '支付运营管理平台');
+      codeStr = creation001(['images/oa.png', 'images/oa01.png'], '天蚕支付运营管理平台');
     } break;
 
     case "002": {
@@ -21,10 +21,10 @@ $(function () {
       codeStr = creation003();
     } break;
     case "005": {
-      codeStr = creation001(['images/case_04_a.png','images/case_04_b.png','images/case_04_c.png','images/case_04_d.png','images/case_04_e.png'],'移动支付营销平台-PC收银');
+      codeStr = creation001(['images/case_04_a.png', 'images/case_04_b.png', 'images/case_04_c.png', 'images/case_04_d.png', 'images/case_04_e.png'], '移动支付营销平台-PC收银');
     } break;
     case "006": {
-      codeStr = creation001(['images/case_06_a.png','images/case_06_b.png','images/case_06_c.png','images/case_06_d.png','images/case_06_e.png'],'生鲜APP');
+      codeStr = creation001(['images/case_06_a.png', 'images/case_06_b.png', 'images/case_06_c.png', 'images/case_06_d.png', 'images/case_06_e.png'], '生鲜APP');
     } break;
 
 
@@ -77,6 +77,14 @@ $(function () {
   }
 
 
+  //回到顶部
+  console.log( $(".scrollTop") ) ;
+  $(".scrollTop").click(function () {
+    isMoving = true; //正要开始动画运动
+    $("html,body").stop().animate({ "scrollTop": 0 }, 500, function () {
+      isMoving = false; //动画运动结束
+    });
+  })
 
 
 })

@@ -28,7 +28,7 @@ gulp.task("copy-files", function () {
 
 	//unslider
 	gulp.src('src/lib/unslider.min.js')
-		.pipe(gulp.dest('dist/lib/unslider.min.js'));
+		.pipe(gulp.dest('dist/lib'));
 
 })
 

@@ -1,6 +1,41 @@
 
 
 /*'整体设计及业务基本设想'内容样式区域*/
+/*banner图内容区域*/
+
+.fresh-banner{
+	width:100%;
+	margin:0 auto;
+	position:relative;
+	}
+.fresh-banner img{
+	display:block;
+	margin:0;
+	}
+.freshText-banner{
+	position:absolute;
+	left:50%;
+	top:220px;
+	width:780px;
+	margin-left:-450px;
+	}
+.freshText-banner h1{
+	font-family:'微软雅黑';
+	font-size:36px;
+	line-height:60px;	
+	color:#fff;	
+	letter-spacing:4px;
+	}
+
+.freshText-banner p{
+	width:80%;
+	font-family:'微软雅黑';	
+	font-style:normal;
+	font-size:24px;
+	line-height:36px;	
+	color:#fff;
+	}
+	
 	
 .design-content{
 	width:100%;

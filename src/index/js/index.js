@@ -17,7 +17,6 @@ $(function(){
     // });
 
   //回到顶部
-  console.log( $(".scrollTop") ) ;
   $(".scrollTop").click(function () {
     isMoving = true; //正要开始动画运动
     $("html,body").stop().animate({ "scrollTop": 0 }, 500, function () {

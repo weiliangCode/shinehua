@@ -285,13 +285,16 @@ footer p span {
   background-color: #666666;
 }
 #sidebarfixed li:hover .sidebar-item {
-  display: block;
+  left: -188px;
 }
 #sidebarfixed .sidebar-item {
+  z-index: -1;
+  transition: 0.5s;
+  transition-delay: 0.1s;
   position: absolute;
   top: -1px;
-  left: -188px;
-  display: none;
+  left: 0px;
+  display: block;
   width: 154px;
 }
 #sidebarfixed .sidebar-item .sidebar-item-inner {

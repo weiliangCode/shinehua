@@ -1,6 +1,19 @@
 
 	
 /*'电商斑斓'文本内容样式区域*/
+.solute-banner{
+	position: relative;
+}
+.solute-banner .shade{
+	width: 100%;
+    /* height: 660px; */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+
 .DS-content{	
 	position:absolute;
 	top:12%;

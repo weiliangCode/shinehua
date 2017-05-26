@@ -11,7 +11,7 @@ $(function () {
   var codeStr = '';
   switch (goodsId) {
     case "001": {
-      codeStr = creation001(['images/oa.png', 'images/oa01.png'], '天蚕支付运营管理平台');
+      codeStr = creation001(['images/oa.png', 'images/oa01.png'], '金蚕支付运营管理平台');
     } break;
 
     case "002": {

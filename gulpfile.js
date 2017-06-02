@@ -33,6 +33,14 @@ gulp.task("copy-files", function () {
 	//favicon.ico
 	gulp.src('src/favicon.ico')
 		.pipe(gulp.dest('dist/'));
+		
+	//swiper
+	gulp.src('src/lib/swiper/**/*')
+		.pipe(gulp.dest('dist/lib/swiper'))
+	
+	//msite
+	gulp.src('src/msite/**/*')
+		.pipe(gulp.dest('dist/msite'))
 
 })
 
@@ -186,7 +194,7 @@ gulp.task('handle-js', function () {
 })
 
 //默认任务
-gulp.task('default', ['copy-files', 'handle-css', 'handle-js', 'handle-html', 'handle-img'], function () {
+gulp.task('default', ['copy-files', 'handle-img','handle-css', 'handle-js', 'handle-html'], function () {
 
 	console.log('所有任务执行完毕');
 

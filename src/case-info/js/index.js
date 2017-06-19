@@ -11,17 +11,17 @@ $(function () {
   var codeStr = '';
   switch (goodsId) {
     case "001": {
-      codeStr = creation001(['images/oa.png', 'images/oa01.png'], '金蚕支付运营管理平台');
+      codeStr = creation001(['images/oa.png', 'images/oa01.png'], '后台运营管理平台');
     } break;
 
-    case "002": {
-      codeStr = creation001(['images/case_pay.png'], '支付接口对接');
-    } break;
+    // case "002": {
+    //   codeStr = creation001(['images/case_pay.png'], '支付接口对接');
+    // } break;
     case "003": {
       codeStr = creation003();
     } break;
     case "005": {
-      codeStr = creation001(['images/case_04_a.png', 'images/case_04_b.png', 'images/case_04_c.png', 'images/case_04_d.png', 'images/case_04_e.png'], '移动支付营销平台-PC收银');
+      codeStr = creation001(['images/case_04_a.png', 'images/case_04_b.png', 'images/case_04_c.png', 'images/case_04_d.png', 'images/case_04_e.png'], '移动营销平台');
     } break;
     case "006": {
       codeStr = creation001(['images/case_06_a.png', 'images/case_06_b.png', 'images/case_06_c.png', 'images/case_06_d.png', 'images/case_06_e.png'], '生鲜APP');
